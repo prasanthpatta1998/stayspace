@@ -21,7 +21,7 @@ const Header = ({ filterIcon }) => {
     <header>
       <nav>
         <ul>
-          <NavLink to="/">
+          <NavLink to="/home">
             <li>
               <div className="header-container">
                 <FaCircleUser className="user-icon" />
