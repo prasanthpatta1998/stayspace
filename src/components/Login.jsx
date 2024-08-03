@@ -31,7 +31,7 @@ const Login = () => {
         localStorage.getItem("email") === values.email &&
         localStorage.getItem("password") === values.password
       ) {
-        navigate("/");
+        navigate("/home");
       } else {
         alert("Please sign in first");
       }

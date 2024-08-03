@@ -43,7 +43,7 @@ const Signup = () => {
       localStorage.setItem('fullname', values.fullname)
       localStorage.setItem('email', values.email)
       localStorage.setItem('password', values.password)
-      navigate('/')
+      navigate('/home')
     },
   });
 

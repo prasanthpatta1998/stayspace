@@ -9,6 +9,14 @@ import Login from "../components/Login";
 const useRouting = createBrowserRouter([
   {
     path: "/",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/home",
     element: <Home />,
   },
   {
@@ -18,14 +26,6 @@ const useRouting = createBrowserRouter([
   {
     path: "/checkout",
     element:  <Checkout />,
-  },
-  {
-    path: "/signup",
-    element: <Signup />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
   },
 ]);
 
