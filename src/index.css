@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Inter:wght@400;700&family=Lekton:wght@400;700&family=Kadwa:wght@400;700&display=swap");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #080808;
+  background-color: #FFFFFF;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: inherit;
+  display: flex;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  font-family: 'Kadwa';
+}
+
+p{
+  margin: 0;
+  font-family: 'Lekton';
+}
+
+body {
+  margin: 0;
+  min-width: 375px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}

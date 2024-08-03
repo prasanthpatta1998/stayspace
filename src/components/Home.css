@@ -1,0 +1,454 @@
+header {
+  margin-bottom: 10px;
+}
+
+main {
+  padding: 0px 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  margin-bottom: 10px;
+  background: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  padding: 10px 20px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  color: #024220;
+}
+
+.header-container > h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-shadow: 1px 1px 1px #b8faec;
+}
+
+.user-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.cart-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.3s ease;
+}
+
+.cart-button:hover,
+.logout:hover {
+  color: #007bff;
+}
+
+.cart-button > p {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  height: 18px;
+  width: 18px;
+  background: red;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  background: #024220;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+  background-color: #046731;
+}
+
+.filter-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  color: #007bff;
+}
+
+.properties-list-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+article {
+  background: #d6ffd9;
+  border-radius: 15px 15px 0px 0px;
+  margin-bottom: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 100%;
+}
+
+.home-image-container {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  overflow: hidden;
+}
+
+.details-container {
+  padding: 10px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 34%;
+}
+
+.details-container > div > h4 {
+  margin: 0;
+  font-family: Kadwa;
+  font-size: 18px;
+}
+
+.details-container > div > p {
+  margin: 0;
+  line-height: 1.1;
+  font-family: Lekton;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.price-container > p {
+  font-family: "Lekton";
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.property-image {
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+small {
+  color: #333333;
+  margin-left: -11px;
+}
+
+@media (min-width: 576px) {
+  nav {
+    padding: 10px 40px;
+  }
+
+  main {
+    padding: 10px 40px;
+  }
+
+  article {
+    width: 48%;
+  }
+
+  .header-container > h1 {
+    font-size: 20px;
+  }
+
+  .user-icon {
+    font-size: 26px;
+  }
+
+  .cart-button {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding: 10px 60px;
+  }
+
+  main {
+    padding: 10px 60px;
+  }
+  .header-container > h1 {
+    font-size: 22px;
+  }
+
+  .user-icon {
+    font-size: 28px;
+  }
+
+  .cart-button {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  nav {
+    padding: 10px 90px;
+  }
+
+  main {
+    padding: 10px 90px;
+  }
+
+  article {
+    width: 32%;
+  }
+
+  .header-container > h1 {
+    font-size: 24px;
+  }
+
+  .user-icon {
+    font-size: 30px;
+  }
+
+  .cart-button {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  nav {
+    padding: 10px 120px;
+  }
+
+  main {
+    padding: 10px 120px;
+  }
+
+  article {
+    width: 24%;
+  }
+
+  .header-container > h1 {
+    font-size: 26px;
+  }
+
+  .user-icon {
+    font-size: 32px;
+  }
+
+  .cart-button {
+    font-size: 26px;
+  }
+}
+
+/* Filter Component  */
+
+.filter-main-section {
+  position: fixed;
+  top: 20px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.62);
+  height: 100vh;
+  width: 100%;
+  bottom: auto;
+}
+
+.filter-section {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.cross-mark-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.cross-mark-container > h3 {
+  margin: 0;
+}
+
+.cross-mark {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}
+
+h3 {
+  margin: 0;
+}
+.prices-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.min-price {
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 4px;
+  font-family: Lekton;
+}
+
+.min-price > input {
+  width: 100px;
+  border: 0px;
+  font-weight: bold;
+}
+
+.bed-room-button {
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Lekton";
+  font-weight: 600;
+}
+
+.button-active {
+  background: #d6ffd9;
+  color: #333333;
+}
+
+.locations {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Lekton";
+  font-size: 1rem;
+  background: #d6ffd9;
+  margin-top: 10px;
+}
+
+.bedrooms {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.clear-all-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.amenities {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 100px;
+  font-family: "Lekton";
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  .filter-main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filter-section {
+    width: 70%;
+    top: 5px;
+    height: 96vh;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cross-mark-container {
+    margin-top: 25px;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  .filter-section {
+    width: 45%;
+  }
+
+  .min-price {
+    width: 175px;
+  }
+
+  .bed-room-button {
+    padding: 10px 30px;
+  }
+}
+
+
+.empty-property-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background-color: #f8f9fa;
+  border: 1px dashed #007bff;
+  border-radius: 8px;
+  margin: 20px;
+  color: #333;
+  font-family: "Barlow", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
