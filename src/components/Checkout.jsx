@@ -75,7 +75,7 @@ const Checkout = () => {
 
   const handlePopup = () => {
     setPopup({ top: "auto", left: "auto" });
-    navigate("/");
+    navigate("/home");
   };
 
   return (
