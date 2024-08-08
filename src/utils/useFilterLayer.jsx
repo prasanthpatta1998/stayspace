@@ -6,7 +6,6 @@ const useFilterLayer = () => {
   const updateFilterLayer = (value) => {
     setFilterLayer(value);
   };
-  console.log('useFilterLayer ===>', filterLayer)
   return [filterLayer, updateFilterLayer];
 };
 

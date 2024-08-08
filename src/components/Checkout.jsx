@@ -1,11 +1,13 @@
 import React, { useContext, useState } from "react";
 import * as Yup from "yup";
+import Cards from "react-credit-cards-2";
 import Header from "./Header";
 import "./Cart.css";
 import { useFormik } from "formik";
 import { MyContext } from "../utils/MyContextProvider";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
+import "react-credit-cards-2/dist/es/styles-compiled.css";
 
 const schema = Yup.object().shape({
   fullname: Yup.string()
@@ -52,6 +54,7 @@ const Checkout = () => {
     top: "auto",
     left: "auto",
   });
+  const [focus, setFocus] = useState("");
 
   const formik = useFormik({
     initialValues: {
@@ -78,11 +81,24 @@ const Checkout = () => {
     navigate("/home");
   };
 
+  const handleInputFocus = ({ target }) => {
+    setFocus(target.name);
+  };
+
   return (
     <>
       <Header />
-      <section className="checkout-section">
+      <section className="checkout-section" style={{marginTop: '80px'}}>
         <h2>Checkout</h2>
+        <div className="card-container">
+          <Cards
+            number={formik.values.cardNumber}
+            expiry={formik.values.expiryDate}
+            cvc={formik.values.cvc}
+            name={formik.values.fullname}
+            focused={focus}
+          />
+        </div>
         <form className="checkout-form" onSubmit={formik.handleSubmit}>
           <div className="form-container">
             <div>
@@ -95,6 +111,7 @@ const Checkout = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.fullname}
+                onFocus={handleInputFocus}
               />
               <p className="error">
                 {formik.errors.fullname &&
@@ -135,11 +152,12 @@ const Checkout = () => {
               <label htmlFor="">Card Number</label>
               <input
                 type="number"
-                placeholder="Card Number"
+                placeholder="9999 9999 9999 9999"
                 name="cardNumber"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.cardNumber}
+                onFocus={handleInputFocus}
               />
               <p className="error">
                 {formik.errors.cardNumber &&
@@ -154,6 +172,7 @@ const Checkout = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.expiryDate}
+                onFocus={handleInputFocus}
               />
               <p className="error">
                 {formik.errors.expiryDate &&
@@ -168,6 +187,7 @@ const Checkout = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.cvc}
+                onFocus={handleInputFocus}
               />
               <p className="error">
                 {formik.errors.cvc && formik.touched.cvc && formik.errors.cvc}
@@ -175,9 +195,9 @@ const Checkout = () => {
             </div>
           </div>
           <div className="checkout-button-container">
-          <button type="submit" className="payment-button">
-            &#x20B9;{totalCharge}
-          </button>
+            <button type="submit" className="payment-button">
+              &#x20B9;{totalCharge}
+            </button>
           </div>
         </form>
       </section>

@@ -7,10 +7,11 @@ import Filter from "./Filter";
 
 const Home = () => {
   const [properties, setProperties] = useState(Properties);
+  const [tempData, setTempData] = useState(Properties);
 
   const filterProperties = (filterData) => {
     const { location, minPrice, maxPrice, bedrooms, amenities } = filterData;
-    const filteredProperties = properties.filter((property) => {
+    const filteredProperties = tempData.filter((property) => {
       const matchesLocation = location
         ? property.location.includes(location)
         : true;
@@ -54,7 +55,7 @@ const Home = () => {
             </>
           ) : (
             <div className="empty-property-message">
-              <p>Property you're looking for are not available.</p>
+              <p>Room you're looking for are not available.</p>
             </div>
           )}
         </section>

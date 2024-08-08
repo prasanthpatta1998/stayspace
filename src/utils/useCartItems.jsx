@@ -45,8 +45,6 @@ const useCartItems = () => {
     setItems([...updatedCartList]);
   };
 
-  console.log("Cart Items ===>", items);
-
   return [
     items,
     totalCharge,

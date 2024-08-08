@@ -1,303 +1,302 @@
 [
-    {
-      "id": 1,
-      "image": "image_20.jpg",
-      "title": "Cozy Apartment",
-      "description": "A cozy apartment in the heart of the city with modern amenities.",
-      "price": 4420,
-      "location": "New York",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Air Conditioning"]
-    },
-    {
-      "id": 2,
-      "image": "image_2.webp",
-      "title": "Luxury Villa",
-      "description": "A luxurious villa with a private pool and sea view.",
-      "price": 6600,
-      "location": "Miami",
-      "bedrooms": 5,
-      "amenities": ["WiFi", "Pool", "Garage"]
-    },
-    {
-      "id": 3,
-      "image": "image_3.webp",
-      "title": "Beachside Bungalow",
-      "description": "A charming bungalow by the beach, perfect for a relaxing getaway.",
-      "price": 3100,
-      "location": "Los Angeles",
-      "bedrooms": 3,
-      "amenities": ["WiFi", "Air Conditioning", "Parking"]
-    },
-    {
-      "id": 4,
-      "image": "image_4.webp",
-      "title": "Urban Loft",
-      "description": "A stylish loft apartment with a stunning city view.",
-      "price": 4750,
-      "location": "Chicago",
-      "bedrooms": 1,
-      "amenities": ["WiFi", "Gym", "Pet Friendly"]
-    },
-    {
-      "id": 5,
-      "image": "image_5.webp",
-      "title": "Mountain Cabin",
-      "description": "A rustic cabin in the mountains, ideal for nature lovers.",
-      "price": 1250,
-      "location": "Denver",
-      "bedrooms": 2,
-      "amenities": ["Fireplace", "Pet Friendly"]
-    },
-    {
-      "id": 6,
-      "image": "image_6.webp",
-      "title": "Downtown Studio",
-      "description": "A modern studio apartment in the downtown area.",
-      "price": 8200,
-      "location": "San Francisco",
-      "bedrooms": 1,
-      "amenities": ["WiFi", "Gym"]
-    },
-    {
-      "id": 7,
-      "image": "image_7.webp",
-      "title": "Family House",
-      "description": "A spacious family house with a large backyard.",
-      "price": 6350,
-      "location": "Houston",
-      "bedrooms": 4,
-      "amenities": ["WiFi", "Garage", "Air Conditioning"]
-    },
-    {
-      "id": 8,
-      "image": "image_8.webp",
-      "title": "Modern Penthouse",
-      "description": "A luxurious penthouse with a panoramic city view.",
-      "price": 9800,
-      "location": "Seattle",
-      "bedrooms": 3,
-      "amenities": ["WiFi", "Pool", "Gym"]
-    },
-    {
-      "id": 9,
-      "image": "image_9.webp",
-      "title": "Suburban Home",
-      "description": "A cozy home in a quiet suburban neighborhood.",
-      "price": 3270,
-      "location": "Dallas",
-      "bedrooms": 3,
-      "amenities": ["WiFi", "Garage"]
-    },
-    {
-      "id": 10,
-      "image": "image_10.webp",
-      "title": "Luxury Condo",
-      "description": "A high-end condo with top-notch amenities.",
-      "price": 4500,
-      "location": "Boston",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Pool", "Gym"]
-    },
-    {
-      "id": 11,
-      "image": "image_11.webp",
-      "title": "Country Cottage",
-      "description": "A charming cottage in the countryside with a beautiful garden.",
-      "price": 2180,
-      "location": "Nashville",
-      "bedrooms": 2,
-      "amenities": ["Fireplace", "Pet Friendly"]
-    },
-    {
-      "id": 12,
-      "image": "image_12.webp",
-      "title": "City Apartment",
-      "description": "A comfortable apartment in the city center, close to amenities.",
-      "price": 7220,
-      "location": "Austin",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Gym"]
-    },
-    {
-      "id": 13,
-      "image": "image_13.webp",
-      "title": "Riverside Cabin",
-      "description": "A peaceful cabin by the river, perfect for a relaxing retreat.",
-      "price": 4230,
-      "location": "Portland",
-      "bedrooms": 1,
-      "amenities": ["WiFi", "Fireplace"]
-    },
-    {
-      "id": 14,
-      "image": "image_14.webp",
-      "title": "Elegant Townhouse",
-      "description": "An elegant townhouse with modern furnishings.",
-      "price": 3400,
-      "location": "Philadelphia",
-      "bedrooms": 3,
-      "amenities": ["WiFi", "Garage", "Air Conditioning"]
-    },
-    {
-      "id": 15,
-      "image": "image_15.webp",
-      "title": "Beach House",
-      "description": "A stunning beach house with ocean views.",
-      "price": 6700,
-      "location": "San Diego",
-      "bedrooms": 4,
-      "amenities": ["WiFi", "Pool", "Pet Friendly"]
-    },
-    {
-      "id": 16,
-      "image": "image_16.webp",
-      "title": "Chic Loft",
-      "description": "A chic loft in a trendy neighborhood.",
-      "price": 8320,
-      "location": "Brooklyn",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Gym", "Pet Friendly"]
-    },
-    {
-      "id": 17,
-      "image": "image_17.webp",
-      "title": "Modern Flat",
-      "description": "A sleek modern flat with contemporary design.",
-      "price": 3280,
-      "location": "Washington, D.C.",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Air Conditioning"]
-    },
-    {
-      "id": 18,
-      "image": "image_18.webp",
-      "title": "Lakefront Cottage",
-      "description": "A serene cottage with a beautiful lake view.",
-      "price": 2260,
-      "location": "Minneapolis",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Fireplace"]
-    },
-    {
-      "id": 19,
-      "image": "image_19.jpg",
-      "title": "Penthouse Suite",
-      "description": "A luxurious penthouse suite with exclusive amenities.",
-      "price": 1200,
-      "location": "Las Vegas",
-      "bedrooms": 4,
-      "amenities": ["WiFi", "Pool", "Gym"]
-    },
-    {
-      "id": 20,
-      "image": "image_20.jpg",
-      "title": "Suburban Ranch",
-      "description": "A spacious ranch-style home in a quiet neighborhood.",
-      "price": 8350,
-      "location": "Phoenix",
-      "bedrooms": 3,
-      "amenities": ["WiFi", "Garage"]
-    },
-    {
-      "id": 21,
-      "image": "image_21.jpg",
-      "title": "Historic Brownstone",
-      "description": "A historic brownstone with classic charm.",
-      "price": 3450,
-      "location": "Baltimore",
-      "bedrooms": 3,
-      "amenities": ["WiFi", "Fireplace", "Pet Friendly"]
-    },
-    {
-      "id": 22,
-      "image": "image_22.jpg",
-      "title": "Luxury Resort Villa",
-      "description": "A luxury villa in a resort with top-notch amenities.",
-      "price": 5950,
-      "location": "Orlando",
-      "bedrooms": 5,
-      "amenities": ["WiFi", "Pool", "Gym"]
-    },
-    {
-      "id": 23,
-      "image": "image_23.jpg",
-      "title": "Studio Apartment",
-      "description": "A compact studio apartment in a prime location.",
-      "price": 6180,
-      "location": "Atlanta",
-      "bedrooms": 1,
-      "amenities": ["WiFi", "Gym"]
-    },
-    {
-      "id": 24,
-      "image": "image_24.jpg",
-      "title": "Modern Townhome",
-      "description": "A contemporary townhome with sleek design.",
-      "price": 4380,
-      "location": "Charlotte",
-      "bedrooms": 3,
-      "amenities": ["WiFi", "Garage", "Pet Friendly"]
-    },
-    {
-      "id": 25,
-      "image": "image_25.jpg",
-      "title": "Rustic Cabin",
-      "description": "A rustic cabin surrounded by nature.",
-      "price": 2240,
-      "location": "Salt Lake City",
-      "bedrooms": 2,
-      "amenities": ["Fireplace", "Pet Friendly"]
-    },
-    {
-      "id": 26,
-      "image": "image_26.jpg",
-      "title": "Luxury High-Rise",
-      "description": "A high-rise apartment with panoramic views.",
-      "price": 6700,
-      "location": "San Jose",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Pool", "Gym"]
-    },
-    {
-      "id": 27,
-      "image": "image_27.jpg",
-      "title": "Garden Villa",
-      "description": "A beautiful villa with a private garden.",
-      "price": 5500,
-      "location": "San Antonio",
-      "bedrooms": 3,
-      "amenities": ["WiFi", "Garage", "Pool"]
-    },
-    {
-      "id": 28,
-      "image": "image_28.jpg",
-      "title": "Charming Duplex",
-      "description": "A charming duplex with modern interiors.",
-      "price": 3300,
-      "location": "Columbus",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Garage"]
-    },
-    {
-      "id": 29,
-      "image": "image_29.jpg",
-      "title": "Seaside Villa",
-      "description": "A beautiful villa with a stunning sea view.",
-      "price": 2000,
-      "location": "Honolulu",
-      "bedrooms": 4,
-      "amenities": ["WiFi", "Pool", "Pet Friendly"]
-    },
-    {
-      "id": 30,
-      "image": "image_30.jpg",
-      "title": "Urban Apartment",
-      "description": "A modern apartment in the city center with great amenities.",
-      "price": 1350,
-      "location": "Denver",
-      "bedrooms": 2,
-      "amenities": ["WiFi", "Gym"]
-    }
-  ]
-  
+  {
+    "id": 1,
+    "image": "room_1.webp",
+    "title": "Modern Room",
+    "description": "A modern room with all necessary amenities for a comfortable stay.",
+    "price": 1200,
+    "location": "Mumbai",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Air Conditioning"]
+  },
+  {
+    "id": 2,
+    "image": "room_2.webp",
+    "title": "Spacious Room",
+    "description": "A spacious room in a quiet neighborhood, perfect for professionals.",
+    "price": 1500,
+    "location": "Delhi",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Heating"]
+  },
+  {
+    "id": 3,
+    "image": "room_3.webp",
+    "title": "Comfortable Room",
+    "description": "A comfortable room with a beautiful view and close to public transport.",
+    "price": 1100,
+    "location": "Bangalore",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Parking"]
+  },
+  {
+    "id": 4,
+    "image": "room_4.webp",
+    "title": "Luxury Room",
+    "description": "A luxury room with premium furnishings and top-notch services.",
+    "price": 2000,
+    "location": "Chennai",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Pool Access", "Gym"]
+  },
+  {
+    "id": 5,
+    "image": "room_5.webp",
+    "title": "Budget Room",
+    "description": "A budget-friendly room with essential amenities and comfortable bed.",
+    "price": 800,
+    "location": "Hyderabad",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Shared Kitchen"]
+  },
+  {
+    "id": 6,
+    "image": "room_6.webp",
+    "title": "Elegant Room",
+    "description": "An elegant room with stylish decor and modern facilities.",
+    "price": 1700,
+    "location": "Kolkata",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "TV"]
+  },
+  {
+    "id": 7,
+    "image": "room_7.webp",
+    "title": "Cozy Room",
+    "description": "A cozy room ideal for students and young professionals.",
+    "price": 900,
+    "location": "Pune",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Air Conditioning"]
+  },
+  {
+    "id": 8,
+    "image": "room_8.webp",
+    "title": "Luxury Suite",
+    "description": "A luxurious suite with exclusive amenities and services.",
+    "price": 2500,
+    "location": "Jaipur",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Pool Access", "Gym"]
+  },
+  {
+    "id": 9,
+    "image": "room_9.webp",
+    "title": "Simple Room",
+    "description": "A simple and clean room at an affordable price.",
+    "price": 700,
+    "location": "Ahmedabad",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Shared Bathroom"]
+  },
+  {
+    "id": 10,
+    "image": "room_10.webp",
+    "title": "Bright Room",
+    "description": "A bright room with large windows and ample natural light.",
+    "price": 1300,
+    "location": "Surat",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Balcony"]
+  },
+  {
+    "id": 11,
+    "image": "room_11.webp",
+    "title": "Modern Room",
+    "description": "A modern room with all necessary amenities for a comfortable stay.",
+    "price": 1200,
+    "location": "Mumbai",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Air Conditioning"]
+  },
+  {
+    "id": 12,
+    "image": "room_12.webp",
+    "title": "Spacious Room",
+    "description": "A spacious room in a quiet neighborhood, perfect for professionals.",
+    "price": 1500,
+    "location": "Delhi",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Heating"]
+  },
+  {
+    "id": 13,
+    "image": "room_13.webp",
+    "title": "Comfortable Room",
+    "description": "A comfortable room with a beautiful view and close to public transport.",
+    "price": 1100,
+    "location": "Bangalore",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Parking"]
+  },
+  {
+    "id": 14,
+    "image": "room_14.webp",
+    "title": "Luxury Room",
+    "description": "A luxury room with premium furnishings and top-notch services.",
+    "price": 2000,
+    "location": "Chennai",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Pool Access", "Gym"]
+  },
+  {
+    "id": 15,
+    "image": "room_15.webp",
+    "title": "Budget Room",
+    "description": "A budget-friendly room with essential amenities and comfortable bed.",
+    "price": 800,
+    "location": "Hyderabad",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Shared Kitchen"]
+  },
+  {
+    "id": 16,
+    "image": "room_16.webp",
+    "title": "Elegant Room",
+    "description": "An elegant room with stylish decor and modern facilities.",
+    "price": 1700,
+    "location": "Kolkata",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "TV"]
+  },
+  {
+    "id": 17,
+    "image": "room_17.webp",
+    "title": "Cozy Room",
+    "description": "A cozy room ideal for students and young professionals.",
+    "price": 900,
+    "location": "Pune",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Air Conditioning"]
+  },
+  {
+    "id": 18,
+    "image": "room_18.webp",
+    "title": "Luxury Suite",
+    "description": "A luxurious suite with exclusive amenities and services.",
+    "price": 2500,
+    "location": "Jaipur",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Pool Access", "Gym"]
+  },
+  {
+    "id": 19,
+    "image": "room_19.webp",
+    "title": "Simple Room",
+    "description": "A simple and clean room at an affordable price.",
+    "price": 700,
+    "location": "Ahmedabad",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Shared Bathroom"]
+  },
+  {
+    "id": 20,
+    "image": "room_20.webp",
+    "title": "Bright Room",
+    "description": "A bright room with large windows and ample natural light.",
+    "price": 1300,
+    "location": "Surat",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Balcony"]
+  },
+  {
+    "id": 21,
+    "image": "room_21.webp",
+    "title": "Modern Room",
+    "description": "A modern room with all necessary amenities for a comfortable stay.",
+    "price": 1200,
+    "location": "Lucknow",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Air Conditioning"]
+  },
+  {
+    "id": 22,
+    "image": "room_22.webp",
+    "title": "Spacious Room",
+    "description": "A spacious room in a quiet neighborhood, perfect for professionals.",
+    "price": 1500,
+    "location": "Kanpur",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Heating"]
+  },
+  {
+    "id": 23,
+    "image": "room_23.webp",
+    "title": "Comfortable Room",
+    "description": "A comfortable room with a beautiful view and close to public transport.",
+    "price": 1100,
+    "location": "Nagpur",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Parking"]
+  },
+  {
+    "id": 24,
+    "image": "room_24.webp",
+    "title": "Luxury Room",
+    "description": "A luxury room with premium furnishings and top-notch services.",
+    "price": 2000,
+    "location": "Indore",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Pool Access", "Gym"]
+  },
+  {
+    "id": 25,
+    "image": "room_25.webp",
+    "title": "Budget Room",
+    "description": "A budget-friendly room with essential amenities and comfortable bed.",
+    "price": 800,
+    "location": "Patna",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Shared Kitchen"]
+  },
+  {
+    "id": 26,
+    "image": "room_26.webp",
+    "title": "Elegant Room",
+    "description": "An elegant room with stylish decor and modern facilities.",
+    "price": 1700,
+    "location": "Bhopal",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "TV"]
+  },
+  {
+    "id": 27,
+    "image": "room_27.webp",
+    "title": "Cozy Room",
+    "description": "A cozy room ideal for students and young professionals.",
+    "price": 900,
+    "location": "Thane",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Air Conditioning"]
+  },
+  {
+    "id": 28,
+    "image": "room_28.webp",
+    "title": "Luxury Suite",
+    "description": "A luxurious suite with exclusive amenities and services.",
+    "price": 2500,
+    "location": "Agra",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Pool Access", "Gym"]
+  },
+  {
+    "id": 29,
+    "image": "room_29.webp",
+    "title": "Simple Room",
+    "description": "A simple and clean room at an affordable price.",
+    "price": 700,
+    "location": "Vadodara",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Shared Bathroom"]
+  },
+  {
+    "id": 30,
+    "image": "room_30.webp",
+    "title": "Bright Room",
+    "description": "A bright room with large windows and ample natural light.",
+    "price": 1300,
+    "location": "Nashik",
+    "bedrooms": 1,
+    "amenities": ["WiFi", "Balcony"]
+  }
+]

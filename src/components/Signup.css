@@ -1,6 +1,7 @@
 .main-container {
   min-height: 100vh;
   width: 100vw;
+  min-width: 375px;
   font-family: "Inter";
   display: flex;
   align-items: center;
@@ -31,7 +32,7 @@
 
 .sign-up-form > h3 {
   font-family: "Barlow";
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   color: #2d2d2d;
   margin: 0;
@@ -73,7 +74,14 @@
   font-size: 16px;
 }
 
-.p > span {
+.error-message {
+  color: red;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.span-button {
   color: #0054a1;
   cursor: pointer;
   outline: none;
@@ -122,6 +130,10 @@
 
   .p {
     font-size: 18px;
+  }
+
+  .icon {
+    right: 20px;
   }
 }
 

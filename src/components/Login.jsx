@@ -21,7 +21,8 @@ const loginSchema = Yup.object().shape({
 
 const Login = () => {
   const navigate = useNavigate();
-  const [icon, setIcon] = useState(true);
+  const [icon, setIcon] = useState(false);
+  const [error, setError] = useState('')
 
   const formik = useFormik({
     initialValues: { email: "", password: "" },
@@ -33,7 +34,7 @@ const Login = () => {
       ) {
         navigate("/home");
       } else {
-        alert("Please sign in first");
+        setError("No account found. Please create an account first.");
       }
     },
   });
@@ -42,7 +43,7 @@ const Login = () => {
     <div className="login main-container">
       <form onSubmit={formik.handleSubmit} className="sign-up-form">
         <h3>
-          Welcome to <span>Property</span>!
+          Welcome to <span>StaySpace</span>!
         </h3>
         <input
           type="email"
@@ -81,9 +82,12 @@ const Login = () => {
         <button type="submit" className="signup-button">
           Log in
         </button>
+        {
+          error !== "" ? <p className="error-message">{error}</p>: null
+        }
         <p>
           Don’t have an account? Create a
-          <span onClick={() => navigate("/signup")}> new account.</span>
+          <span onClick={() => navigate("/")} className="span-button"> new account.</span>
         </p>
       </form>
     </div>

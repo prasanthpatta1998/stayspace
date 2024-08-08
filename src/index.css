@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Inter:wght@400;700&family=Lekton:wght@400;700&family=Kadwa:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Inter:wght@400;700&family=Lekton:wght@400;700&family=Kadwa:wght@400;700&family=Capriola:wght@400;700&display=swap");
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: #080808;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,14 +20,19 @@ a {
   display: flex;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
-  font-family: 'Kadwa';
+  font-family: "Kadwa";
 }
 
-p{
+p {
   margin: 0;
-  font-family: 'Lekton';
+  font-family: "Lekton";
 }
 
 body {
@@ -36,4 +41,9 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }

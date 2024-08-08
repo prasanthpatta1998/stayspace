@@ -6,8 +6,8 @@ import { MyContext } from "../utils/MyContextProvider.jsx";
 const Filter = ({ property, filterProperties }) => {
   const [filters, setFilters] = useState({
     location: "",
-    minPrice: 1000,
-    maxPrice: 10000,
+    minPrice: 500,
+    maxPrice: 3000,
     bedrooms: "Any",
     amenities: [],
   });
@@ -42,8 +42,8 @@ const Filter = ({ property, filterProperties }) => {
   const handleClear = () => {
     setFilters({
       location: "",
-      minPrice: 1000,
-      maxPrice: 10000,
+      minPrice: 500,
+      maxPrice: 3000,
       bedrooms: "Any",
       amenities: [],
     });
@@ -52,6 +52,7 @@ const Filter = ({ property, filterProperties }) => {
   const handleShowPlaces = () => {
     filterProperties(filters);
     setPositionTop({ top: "auto", bottom: "-100%" });
+    updateFilterLayer(!filterLayer);
   };
 
   const closeLayer = () => {
@@ -59,10 +60,11 @@ const Filter = ({ property, filterProperties }) => {
   };
 
   return (
-    <div className="filter-main-section" style={{ top: `${positionTop.top}`, bottom: `${positionTop.bottom}` }}>
-      <div
-        className="filter-section"
-      >
+    <div
+      className="filter-main-section"
+      style={{ top: `${positionTop.top}`, bottom: `${positionTop.bottom}` }}
+    >
+      <div className="filter-section">
         <div className="cross-mark-container">
           <RxCross2 className="cross-mark" onClick={() => closeLayer()} />
           <h3>Filters</h3>

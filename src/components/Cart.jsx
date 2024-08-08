@@ -8,7 +8,7 @@ import "./Cart.css";
 import { useNavigate } from "react-router-dom";
 import useImagesMap from "../utils/useImagesMap";
 
-const cleaningFee = 500;
+const cleaningFee = 100;
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -39,11 +39,10 @@ const Cart = () => {
     <>
       <Header filterIcon="false" />
       {items?.length > 0 ? (
-        <section className="cart-items-total-charge-container">
+        <section className="cart-items-total-charge-container" style={{marginTop:'80px'}}>
           <section className="cart-tems-display">
             {items?.map((eachItem) => {
               const totalCost = parseInt(eachItem.price) * eachItem.count;
-              console.log(eachItem.count);
               return (
                 <>
                   <section key={eachItem.id} className="cart-container">

@@ -25,7 +25,7 @@ const SingleProperty = (props) => {
       <div className="details-container">
         <div>
           <h4>{title}</h4>
-          <p>{description}</p>
+          <p className="overflow-element">{description}</p>
         </div>
         <div className="price-container">
           <p>

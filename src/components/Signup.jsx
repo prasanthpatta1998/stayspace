@@ -34,16 +34,32 @@ const schema = Yup.object().shape({
 
 const Signup = () => {
   const navigate = useNavigate();
-  const [icon, setIcon] = useState(true);
+  const [icon, setIcon] = useState(false);
+  const [error, setError] = useState('')
 
   const formik = useFormik({
     initialValues: { fullname: "", email: "", password: "" },
     validationSchema: schema,
     onSubmit: (values) => {
-      localStorage.setItem('fullname', values.fullname)
-      localStorage.setItem('email', values.email)
-      localStorage.setItem('password', values.password)
-      navigate('/home')
+      if (
+        localStorage.getItem("email") === values.email &&
+        localStorage.getItem("password") === values.password
+      ) {
+        setError("It looks like you already have an account. Please log in.");
+      } else if (localStorage.getItem("email") === values.email) {
+        setError(
+          "This email is already associated with an account. Please try a different email."
+        );
+      } else if (localStorage.getItem("password") === values.password) {
+        setError(
+          "This password is already in use. Please choose a different password."
+        );
+      } else {
+        localStorage.setItem("fullname", values.fullname);
+        localStorage.setItem("email", values.email);
+        localStorage.setItem("password", values.password);
+        navigate("/home");
+      }
     },
   });
 
@@ -51,7 +67,7 @@ const Signup = () => {
     <div className="signup main-container">
       <form noValidate onSubmit={formik.handleSubmit} className="sign-up-form">
         <h3>
-          Welcome to <span>Property</span>!
+          Welcome to <span>StaySpace</span>!
         </h3>
         <input
           type="text"
@@ -101,10 +117,18 @@ const Signup = () => {
             formik.touched.password &&
             formik.errors.password}
         </p>
-        <button type="submit" className="signup-button">Sign up</button>
+        <button type="submit" className="signup-button">
+          Sign up
+        </button>
+        {
+          error !== "" ? <p className="error-message">{error}</p>: null
+        }
         <p className=".p">
           Already have an account?
-          <span onClick={() => navigate("/login")}> Log in</span>
+          <span onClick={() => navigate("/login")} className="span-button">
+            {" "}
+            Log in
+          </span>
         </p>
       </form>
     </div>

@@ -21,7 +21,6 @@
   height: 90px;
 }
 
-
 .cart-title-container {
   width: 68%;
   padding-left: 16px;
@@ -44,7 +43,6 @@
   font-weight: bold;
   color: #000000;
 }
-
 
 .buttons-container {
   margin-top: 16px;
@@ -126,7 +124,6 @@
   background-color: #0056b3;
 }
 
-
 /* Checkout Form */
 
 .checkout-section {
@@ -184,12 +181,12 @@
   margin-bottom: 8px;
 }
 
-@media (min-width:576px) {
-  .cart-container{
+@media (min-width: 576px) {
+  .cart-container {
     margin: 10px 40px;
   }
 
-  .cart-total-amount{
+  .cart-total-amount {
     margin: 10px 40px;
   }
 }
@@ -221,7 +218,7 @@
     margin-top: 0;
   }
 
-  .cart-tems-display{
+  .cart-tems-display {
     width: 60%;
   }
 
@@ -286,7 +283,6 @@
   .cart-total-amount {
     margin: 0px 120px 0px 60px;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -374,6 +370,8 @@
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  margin: 0px 20px;
+  margin-top: 80px;
 }
 
 .empty-cart-message p {
@@ -382,39 +380,66 @@
 }
 
 @media (min-width: 576px) {
-  .checkout-section{
+  .checkout-section {
     margin: 0px 40px;
+  }
+
+  .empty-cart-message {
+    margin: 10px 40px;
+    margin-top: 80px;
   }
 }
 
 @media (min-width: 768px) {
-  .checkout-section{
+  .checkout-section {
     margin: 0px 60px;
   }
 
-  .form-container{
+  .form-container {
     display: flex;
     justify-content: space-between;
   }
 
-  .checkout-button-container{
+  .checkout-button-container {
     display: flex;
     justify-content: flex-end;
   }
 
-  .payment-button{
+  .payment-button {
     width: 30%;
+  }
+
+  .empty-cart-message {
+    margin: 10px 60px;
+    margin-top: 80px;
   }
 }
 
 @media (min-width: 992px) {
-  .checkout-section{
+  .checkout-section {
     margin: 0px 90px;
+  }
+
+  .empty-cart-message {
+    margin: 10px 90px;
+    margin-top: 80px;
   }
 }
 
 @media (min-width: 1200px) {
-  .checkout-section{
+  .checkout-section {
     margin: 0px 120px;
   }
+
+  .empty-cart-message {
+    margin: 10px 120px;
+    margin-top: 80px;
+  }
+}
+
+/* //Card  */
+.card-container {
+  margin: 10px 0px;
+  position: relative;
+  z-index: -1;
 }
