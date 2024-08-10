@@ -34,8 +34,6 @@ const Login = () => {
         localStorage.getItem("email") === values.email &&
         localStorage.getItem("password") === values.password
       ) {
-        localStorage.setItem("loginemail", values.email);
-        localStorage.setItem("loginpassword", values.password);
         login();
         navigate("/home");
       } else {
