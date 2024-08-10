@@ -101,7 +101,7 @@ const Checkout = () => {
         </div>
         <form className="checkout-form" onSubmit={formik.handleSubmit}>
           <div className="form-container">
-            <div>
+            <div className='contact-container'>
               <h2>Contact Information</h2>
               <label htmlFor="">Full Name</label>
               <input
@@ -147,7 +147,7 @@ const Checkout = () => {
                   formik.errors.phoneNumber}
               </p>
             </div>
-            <div>
+            <div className="payment-container">
               <h2>Payment Details</h2>
               <label htmlFor="">Card Number</label>
               <input

@@ -4,6 +4,7 @@ import Properties from "./mock/mockPropertiesData.json";
 import "./Home.css";
 import SingleProperty from "./SingleProperty";
 import Filter from "./Filter";
+import stayspace from "../assets/images/stayspace_img.png";
 
 const Home = () => {
   const [properties, setProperties] = useState(Properties);
@@ -41,6 +42,9 @@ const Home = () => {
     <>
       <Header filterIcon="true" />
       <main>
+        {/* <section>
+          <img src={stayspace} alt="Stay Space" />
+        </section> */}
         <section className="properties-list-container">
           {properties?.length > 0 ? (
             <>

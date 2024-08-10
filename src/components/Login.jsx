@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import * as Yup from "yup";
 import "./Signup.css";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { VscEye } from "react-icons/vsc";
 import { VscEyeClosed } from "react-icons/vsc";
+import { MyContext } from "../utils/MyContextProvider";
 
 const loginSchema = Yup.object().shape({
   email: Yup.string()
@@ -22,7 +23,8 @@ const loginSchema = Yup.object().shape({
 const Login = () => {
   const navigate = useNavigate();
   const [icon, setIcon] = useState(false);
-  const [error, setError] = useState('')
+  const [error, setError] = useState("");
+  const { login } = useContext(MyContext);
 
   const formik = useFormik({
     initialValues: { email: "", password: "" },
@@ -32,6 +34,9 @@ const Login = () => {
         localStorage.getItem("email") === values.email &&
         localStorage.getItem("password") === values.password
       ) {
+        localStorage.setItem("loginemail", values.email);
+        localStorage.setItem("loginpassword", values.password);
+        login();
         navigate("/home");
       } else {
         setError("No account found. Please create an account first.");
@@ -54,7 +59,7 @@ const Login = () => {
           value={formik.values.email}
           className="input-element"
         />
-        <p className="error">
+        <p className="error-p">
           {formik.errors.email && formik.touched.email && formik.errors.email}
         </p>
         <div className="input">
@@ -74,7 +79,7 @@ const Login = () => {
             <VscEyeClosed className="icon" onClick={() => setIcon(true)} />
           )}
         </div>
-        <p className="error">
+        <p className="error-p">
           {formik.errors.password &&
             formik.touched.password &&
             formik.errors.password}
@@ -82,12 +87,13 @@ const Login = () => {
         <button type="submit" className="signup-button">
           Log in
         </button>
-        {
-          error !== "" ? <p className="error-message">{error}</p>: null
-        }
+        {error !== "" ? <p className="error-message">{error}</p> : null}
         <p>
           Don’t have an account? Create a
-          <span onClick={() => navigate("/")} className="span-button"> new account.</span>
+          <span onClick={() => navigate("/")} className="span-button">
+            {" "}
+            new account.
+          </span>
         </p>
       </form>
     </div>

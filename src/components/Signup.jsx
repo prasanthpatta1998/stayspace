@@ -78,7 +78,7 @@ const Signup = () => {
           value={formik.values.fullname}
           className="input-element"
         />
-        <p className="error">
+        <p className="error-p">
           {formik.errors.fullname &&
             formik.touched.fullname &&
             formik.errors.fullname}
@@ -92,7 +92,7 @@ const Signup = () => {
           value={formik.values.email}
           className="input-element"
         />
-        <p className="error">
+        <p className="error-p">
           {formik.errors.email && formik.touched.email && formik.errors.email}
         </p>
         <div className="input">
@@ -112,7 +112,7 @@ const Signup = () => {
             <VscEyeClosed className="icon" onClick={() => setIcon(true)} />
           )}
         </div>
-        <p className="error">
+        <p className="error-p">
           {formik.errors.password &&
             formik.touched.password &&
             formik.errors.password}

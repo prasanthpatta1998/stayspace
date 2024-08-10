@@ -5,6 +5,7 @@ import Cart from "../components/Cart";
 import Checkout from "../components/Checkout";
 import Signup from "../components/Signup";
 import Login from "../components/Login";
+import ProtectedRoute from "./ProtectedRoute";
 
 const useRouting = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const useRouting = createBrowserRouter([
   },
   {
     path: "/checkout",
-    element:  <Checkout />,
+    element: <ProtectedRoute element={<Checkout />} />,
   },
 ]);
 

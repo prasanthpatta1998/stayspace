@@ -5,17 +5,23 @@ const useCartItems = () => {
   const [totalCharge, setTotalCharge] = useState(0);
 
   const updateCartItems = (item) => {
-    setItems([
-      ...items,
-      {
-        ...item,
-        bookingDate: new Date().toLocaleDateString("en-US", {
-          day: "numeric",
-          month: "short",
-        }),
-        count: 1,
-      },
-    ]);
+    const boolValue = items.find((eachItem) => eachItem.id === item.id);
+    console.log(boolValue);
+    if (boolValue) {
+      setItems([...items]);
+    } else {
+      setItems([
+        ...items,
+        {
+          ...item,
+          bookingDate: new Date().toLocaleDateString("en-US", {
+            day: "numeric",
+            month: "short",
+          }),
+          count: 1,
+        },
+      ]);
+    }
   };
 
   const incrementItemCount = (property) => {
@@ -53,7 +59,7 @@ const useCartItems = () => {
     incrementItemCount,
     decrementItemCount,
     removeItem,
-    setTotalCharge
+    setTotalCharge,
   ];
 };
 

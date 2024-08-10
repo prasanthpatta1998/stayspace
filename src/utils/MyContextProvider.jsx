@@ -1,10 +1,12 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import useFilterLayer from "./useFilterLayer";
 import useCartItems from "./useCartItems";
+import Login from "../components/Login";
 
 export const MyContext = createContext();
 
 const MyContextProvider = ({ children }) => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [filterLayer, updateFilterLayer] = useFilterLayer();
   const [
     items,
@@ -17,9 +19,20 @@ const MyContextProvider = ({ children }) => {
     setTotalCharge,
   ] = useCartItems();
 
+  const login = () => {
+    setIsAuthenticated(true);
+  };
+
+  const logout = () => {
+    setIsAuthenticated(false);
+  };
+
+  console.log("Is Authenticated ===>", isAuthenticated);
+
   return (
     <MyContext.Provider
       value={{
+        isAuthenticated,
         filterLayer,
         updateFilterLayer,
         items,
@@ -30,6 +43,8 @@ const MyContextProvider = ({ children }) => {
         decrementItemCount,
         removeItem,
         setTotalCharge,
+        login,
+        logout,
       }}
     >
       {children}
