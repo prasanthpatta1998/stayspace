@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./Signup.css";
 import { useNavigate } from "react-router-dom";
 import { VscEye } from "react-icons/vsc";
 import { VscEyeClosed } from "react-icons/vsc";
+import { MyContext } from "../utils/MyContextProvider";
 
 const schema = Yup.object().shape({
   fullname: Yup.string()
@@ -35,7 +36,9 @@ const schema = Yup.object().shape({
 const Signup = () => {
   const navigate = useNavigate();
   const [icon, setIcon] = useState(false);
-  const [error, setError] = useState('')
+  const [error, setError] = useState("");
+
+  const { login } = useContext(MyContext);
 
   const formik = useFormik({
     initialValues: { fullname: "", email: "", password: "" },
@@ -58,6 +61,7 @@ const Signup = () => {
         localStorage.setItem("fullname", values.fullname);
         localStorage.setItem("email", values.email);
         localStorage.setItem("password", values.password);
+        login()
         navigate("/home");
       }
     },
@@ -120,9 +124,7 @@ const Signup = () => {
         <button type="submit" className="signup-button">
           Sign up
         </button>
-        {
-          error !== "" ? <p className="error-message">{error}</p>: null
-        }
+        {error !== "" ? <p className="error-message">{error}</p> : null}
         <p className=".p">
           Already have an account?
           <span onClick={() => navigate("/login")} className="span-button">
