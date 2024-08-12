@@ -6,8 +6,9 @@ import { MyContext } from "../utils/MyContextProvider";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = ({ filterIcon }) => {
-  const { filterLayer, updateFilterLayer, items, logout } =
+  const { filterLayer, updateFilterLayer, items } =
     useContext(MyContext);
+    
   const navigate = useNavigate();
 
   const filterlayer = () => {
@@ -15,7 +16,7 @@ const Header = ({ filterIcon }) => {
   };
 
   const logoutAccount = () => {
-    logout();
+    localStorage.removeItem('token')
     navigate("/login");
   };
 

@@ -34,7 +34,13 @@ const Login = () => {
         localStorage.getItem("email") === values.email &&
         localStorage.getItem("password") === values.password
       ) {
-        login();
+        const genRandomStringNthChar = () => {
+          return [...Array(100)]
+            .map(() => Math.random().toString(36)[2])
+            .join("");
+        };
+
+        localStorage.setItem("token", genRandomStringNthChar());
         navigate("/home");
       } else {
         setError("No account found. Please create an account first.");
