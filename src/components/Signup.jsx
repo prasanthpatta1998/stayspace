@@ -38,8 +38,6 @@ const Signup = () => {
   const [icon, setIcon] = useState(false);
   const [error, setError] = useState("");
 
-  const { login } = useContext(MyContext);
-
   const formik = useFormik({
     initialValues: { fullname: "", email: "", password: "" },
     validationSchema: schema,
@@ -61,7 +59,13 @@ const Signup = () => {
         localStorage.setItem("fullname", values.fullname);
         localStorage.setItem("email", values.email);
         localStorage.setItem("password", values.password);
-        login()
+        const generateRandomString = () => {
+          return [...Array(100)]
+            .map(() => Math.random().toString(36)[2])
+            .join("");
+        };
+
+        localStorage.setItem("token", generateRandomString());
         navigate("/checkout");
       }
     },

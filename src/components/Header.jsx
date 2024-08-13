@@ -6,9 +6,8 @@ import { MyContext } from "../utils/MyContextProvider";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = ({ filterIcon }) => {
-  const { filterLayer, updateFilterLayer, items } =
-    useContext(MyContext);
-    
+  const { filterLayer, updateFilterLayer, items } = useContext(MyContext);
+
   const navigate = useNavigate();
 
   const filterlayer = () => {
@@ -16,9 +15,11 @@ const Header = ({ filterIcon }) => {
   };
 
   const logoutAccount = () => {
-    localStorage.removeItem('token')
+    localStorage.removeItem("token");
     navigate("/login");
   };
+
+  console.log(localStorage.getItem("fullname"));
 
   return (
     <header>
@@ -28,7 +29,11 @@ const Header = ({ filterIcon }) => {
             <li>
               <div className="header-container">
                 <FaCircleUser className="user-icon" />
-                <h1>{localStorage.getItem("fullname")}</h1>
+                {localStorage.getItem("fullname") === null ? (
+                  <h1>Welcome Friend</h1>
+                ) : (
+                  <h1>{localStorage.getItem("fullname")}</h1>
+                )}
               </div>
             </li>
           </NavLink>
