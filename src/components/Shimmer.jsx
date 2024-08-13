@@ -3,14 +3,14 @@ import "./Home.css";
 
 const CardShimmer = () => {
   return (
-    <article class="shimmer-article">
-      <div class="shimmer-image"></div>
-      <div class="shimmer-content">
-        <div class="shimmer-title"></div>
-        <div class="shimmer-text"></div>
-        <div class="shimmer-buttons">
-          <div class="shimmer-text"></div>
-          <div class="shimmer-button"></div>
+    <article className="shimmer-article">
+      <div className="shimmer-image"></div>
+      <div className="shimmer-content">
+        <div className="shimmer-title"></div>
+        <div className="shimmer-text"></div>
+        <div className="shimmer-buttons">
+          <div className="shimmer-text"></div>
+          <div className="shimmer-button"></div>
         </div>
       </div>
     </article>

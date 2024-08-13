@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "./Header";
 import Properties from "./mock/mockPropertiesData.json";
 import "./Home.css";
@@ -6,17 +6,18 @@ import SingleProperty from "./SingleProperty";
 import Filter from "./Filter";
 import stayspace from "../assets/images/stayspace_img.png";
 import { HeaderShimmer, Shimmer } from "./Shimmer";
+import { MyContext } from "../utils/MyContextProvider";
 
 const Home = () => {
   const [properties, setProperties] = useState(Properties);
   const [tempData, setTempData] = useState(Properties);
-  const [shimmer, setShimmer] = useState(true);
+  const {shimmer, setShimmer} = useContext(MyContext)
 
   useEffect(() => {
     setTimeout(() => {
       setShimmer(false);
     }, 4000);
-  });
+  },[shimmer]);
 
   const filterProperties = (filterData) => {
     const { location, minPrice, maxPrice, bedrooms, amenities } = filterData;

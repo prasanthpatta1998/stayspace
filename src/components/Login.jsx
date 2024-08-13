@@ -31,19 +31,27 @@ const Login = () => {
     validationSchema: loginSchema,
     onSubmit: (values) => {
       if (
-        localStorage.getItem("email") === values.email &&
-        localStorage.getItem("password") === values.password
+        localStorage.getItem("email") !== values.email &&
+        localStorage.getItem("password") !== values.password
       ) {
-        const genRandomStringNthChar = () => {
+        setError(
+          "No account found with the provided email and password. Please create an account."
+        );
+      } else if (localStorage.getItem("email") !== values.email) {
+        setError(
+          "The email address you entered does not match any account. Please create an account."
+        );
+      } else if (localStorage.getItem("password") !== values.password) {
+        setError("The password you entered is incorrect. Please try again.");
+      } else {
+        const generateRandomString = () => {
           return [...Array(100)]
             .map(() => Math.random().toString(36)[2])
             .join("");
         };
 
-        localStorage.setItem("token", genRandomStringNthChar());
-        navigate("/home");
-      } else {
-        setError("No account found. Please create an account first.");
+        localStorage.setItem("token", generateRandomString());
+        navigate("/checkout");
       }
     },
   });
@@ -94,7 +102,7 @@ const Login = () => {
         {error !== "" ? <p className="error-message">{error}</p> : null}
         <p>
           Don’t have an account? Create a
-          <span onClick={() => navigate("/")} className="span-button">
+          <span onClick={() => navigate("/signup")} className="span-button">
             {" "}
             new account.
           </span>

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import * as Yup from "yup";
 import Cards from "react-credit-cards-2";
 import Header from "./Header";
@@ -8,6 +8,8 @@ import { MyContext } from "../utils/MyContextProvider";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 import "react-credit-cards-2/dist/es/styles-compiled.css";
+import Confetti from "react-confetti";
+import useWindowSize from "react-use/lib/useWindowSize";
 
 const schema = Yup.object().shape({
   fullname: Yup.string()
@@ -47,6 +49,7 @@ const schema = Yup.object().shape({
 
 const Checkout = () => {
   const navigate = useNavigate();
+  const { height, width } = useWindowSize();
 
   const { totalCharge, setItems } = useContext(MyContext);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
@@ -55,6 +58,18 @@ const Checkout = () => {
     left: "auto",
   });
   const [focus, setFocus] = useState("");
+
+  useEffect(() => {
+    if (popup.top === "0px" && popup.left === "0px") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [popup]);
 
   const formik = useFormik({
     initialValues: {
@@ -78,7 +93,7 @@ const Checkout = () => {
 
   const handlePopup = () => {
     setPopup({ top: "auto", left: "auto" });
-    navigate("/home");
+    navigate("/");
   };
 
   const handleInputFocus = ({ target }) => {
@@ -88,7 +103,7 @@ const Checkout = () => {
   return (
     <>
       <Header />
-      <section className="checkout-section" style={{marginTop: '80px'}}>
+      <section className="checkout-section" style={{ marginTop: "80px" }}>
         <h2>Checkout</h2>
         <div className="card-container">
           <Cards
@@ -101,7 +116,7 @@ const Checkout = () => {
         </div>
         <form className="checkout-form" onSubmit={formik.handleSubmit}>
           <div className="form-container">
-            <div className='contact-container'>
+            <div className="contact-container">
               <h2>Contact Information</h2>
               <label htmlFor="">Full Name</label>
               <input
@@ -205,6 +220,7 @@ const Checkout = () => {
         className="payment-suceessful-container"
         style={{ top: `${popup.top}`, left: `${popup.left}` }}
       >
+        <Confetti width={width} height={height} />
         <div>
           <RxCross2 className="close-popup" onClick={() => handlePopup()} />
           Payment is successfull

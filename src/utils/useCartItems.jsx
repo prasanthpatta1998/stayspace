@@ -6,7 +6,6 @@ const useCartItems = () => {
 
   const updateCartItems = (item) => {
     const boolValue = items.find((eachItem) => eachItem.id === item.id);
-    console.log(boolValue);
     if (boolValue) {
       setItems([...items]);
     } else {

@@ -7,18 +7,11 @@ import Signup from "../components/Signup";
 import Login from "../components/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import ErrorPage from "../components/ErrorPage";
+import Account from "../components/Account";
 
 const useRouting = createBrowserRouter([
   {
     path: "/",
-    element: <Signup />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/home",
     element: <Home />,
   },
   {
@@ -30,9 +23,17 @@ const useRouting = createBrowserRouter([
     element: <ProtectedRoute element={<Checkout />} />,
   },
   {
-    path: '*',
-    element: <ErrorPage/>
-  }
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "*",
+    element: <ErrorPage />,
+  },
 ]);
 
 export default useRouting;

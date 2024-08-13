@@ -62,7 +62,7 @@ const Signup = () => {
         localStorage.setItem("email", values.email);
         localStorage.setItem("password", values.password);
         login()
-        navigate("/home");
+        navigate("/checkout");
       }
     },
   });

@@ -7,6 +7,7 @@ export const MyContext = createContext();
 
 const MyContextProvider = ({ children }) => {
   const [filterLayer, updateFilterLayer] = useFilterLayer();
+  const [shimmer, setShimmer] = useState(true);
   const [
     items,
     totalCharge,
@@ -18,11 +19,12 @@ const MyContextProvider = ({ children }) => {
     setTotalCharge,
   ] = useCartItems();
 
-
   return (
     <MyContext.Provider
       value={{
         filterLayer,
+        shimmer,
+        setShimmer,
         updateFilterLayer,
         items,
         totalCharge,

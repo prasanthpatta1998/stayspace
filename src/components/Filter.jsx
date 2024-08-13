@@ -22,8 +22,17 @@ const Filter = ({ property, filterProperties }) => {
   const { filterLayer, updateFilterLayer } = useContext(MyContext);
 
   useEffect(() => {
-    if (filterLayer) setPositionTop({ top: "0px", bottom: "auto" });
-    else setPositionTop({ top: "auto", bottom: "-100%" });
+    if (filterLayer) {
+      setPositionTop({ top: "0px", bottom: "auto" });
+      document.body.style.overflow = "hidden";
+    } else {
+      setPositionTop({ top: "auto", bottom: "-100%" });
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [filterLayer]);
 
   const handleChange = (e) => {
@@ -98,7 +107,7 @@ const Filter = ({ property, filterProperties }) => {
           </div>
         </div>
         <hr />
-        <div>
+        {/* <div>
           <h3>Number of Bedrooms</h3>
           <div className="bedrooms">
             {bedRoomsCount?.map((each, index) => {
@@ -116,7 +125,7 @@ const Filter = ({ property, filterProperties }) => {
             })}
           </div>
         </div>
-        <hr />
+        <hr /> */}
         <div>
           <h3>Location</h3>
           <select

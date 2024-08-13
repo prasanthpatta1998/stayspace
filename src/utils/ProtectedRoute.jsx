@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Navigate } from "react-router-dom";
-import { MyContext } from "./MyContextProvider";
 
 const ProtectedRoute = ({ element }) => {
   const token = localStorage.getItem("token");
-  return token ? element : <Navigate to="/login" />;
+  return token ? element : <Navigate to="/login" replace/>;
 };
 
 export default ProtectedRoute;

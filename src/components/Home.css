@@ -51,19 +51,23 @@ li {
   color: #333;
   text-shadow: 1px 1px 1px #b8faec;
   margin-top: 1.3%;
+  transition: all 0.3s ease;
 }
 
 .header-container > h1:hover {
-  color: red;
+  transform: scale(0.96);
+  color: rgb(255, 182, 182);
 }
 
 .user-icon {
   font-size: 24px;
   margin-right: 8px;
+  transition: all 0.3s ease;
 }
 
 .user-icon:hover {
-  color: red;
+  transform: scale(0.96);
+  color: rgb(255, 182, 182);
 }
 
 .cart-button {
@@ -76,11 +80,10 @@ li {
   position: relative;
   cursor: pointer;
   padding: 8px;
-  transition: color 0.3s ease;
 }
 
 .cart-button:hover {
-  color: red;
+  color: rgb(255, 182, 182);
 }
 
 .cart-button > p {
@@ -97,6 +100,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
 .logout {
@@ -379,6 +383,10 @@ h3 {
   font-weight: bold;
 }
 
+.min-price > input:focus{
+  outline: none;
+}
+
 .bed-room-button {
   background: #f7f7f7;
   border: 1px solid #ddd;
@@ -405,6 +413,7 @@ h3 {
   font-size: 1rem;
   background: #d6ffd9;
   margin-top: 10px;
+  color: #333333;
 }
 
 .bedrooms {
@@ -428,6 +437,11 @@ h3 {
   height: 100px;
   font-family: "Lekton";
   font-size: 1rem;
+  color: #333333;
+}
+
+.amenities:focus{
+  
 }
 
 @media (min-width: 576px) {
@@ -656,9 +670,6 @@ h3 {
   .shimmer-filter {
     margin-right: 16px;
   }
-
-  .shimmer-button {
-  }
 }
 
 @media (min-width: 1200px) {
@@ -679,7 +690,88 @@ h3 {
   .shimmer-filter {
     margin-right: 18px;
   }
+}
 
-  .shimmer-button {
+/* //Error Page  */
+
+.error-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 75vh;
+}
+
+.error-page-container > div > img {
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+}
+
+.error-page-container > h1 {
+  text-align: center;
+  margin: 10px 0px;
+  font-size: 16px;
+}
+
+.error-page-container > h3 > a {
+  color: #024220;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (min-width: 576px) {
+  .error-page-container > div > img {
+    height: 200px;
+  }
+
+  .error-page-container > h1 {
+    font-size: 20px;
+  }
+
+  .error-page-container > h3 > a {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .error-page-container > div > img {
+    height: 220px;
+  }
+
+  .error-page-container > h1 {
+    font-size: 22px;
+  }
+
+  .error-page-container > h3 > a {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .error-page-container > div > img {
+    height: 240px;
+  }
+
+  .error-page-container > h1 {
+    font-size: 24px;
+  }
+
+  .error-page-container > h3 > a {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .error-page-container > div > img {
+    height: 260px;
+  }
+
+  .error-page-container > h1 {
+    font-size: 26px;
+  }
+
+  .error-page-container > h3 > a {
+    font-size: 24px;
   }
 }
