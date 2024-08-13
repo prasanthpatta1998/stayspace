@@ -51,7 +51,7 @@ const Login = () => {
         };
 
         localStorage.setItem("token", generateRandomString());
-        navigate("/checkout");
+        navigate("/");
       }
     },
   });
