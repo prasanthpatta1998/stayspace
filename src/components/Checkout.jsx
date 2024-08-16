@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import "react-credit-cards-2/dist/es/styles-compiled.css";
 import Confetti from "react-confetti";
 import useWindowSize from "react-use/lib/useWindowSize";
+import Footer from "./Footer";
 
 const schema = Yup.object().shape({
   fullname: Yup.string()
@@ -226,6 +227,7 @@ const Checkout = () => {
           Payment is successfull
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

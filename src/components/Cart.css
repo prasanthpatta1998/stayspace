@@ -330,6 +330,7 @@
   }
 }
 
+
 @media (min-width: 768px) {
   .cart-items-total-charge-container {
     display: flex;
@@ -404,6 +405,7 @@
 
 .empty-cart-message {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /* width: 100%; */
@@ -418,7 +420,7 @@
   font-weight: bold;
   text-align: center;
   margin: 0px 20px;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .empty-cart-message p {
@@ -433,7 +435,7 @@
 
   .empty-cart-message {
     margin: 10px 40px;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 
@@ -458,7 +460,7 @@
 
   .empty-cart-message {
     margin: 10px 60px;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 
@@ -469,7 +471,7 @@
 
   .empty-cart-message {
     margin: 10px 90px;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 
   .payment-button {
@@ -484,7 +486,7 @@
 
   .empty-cart-message {
     margin: 10px 120px;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 
   .payment-button {

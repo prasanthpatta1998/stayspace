@@ -14,7 +14,7 @@ const Filter = ({ property, filterProperties }) => {
 
   const [positionTop, setPositionTop] = useState({
     top: "auto",
-    bottom: "-100%",
+    bottom: "-100vh",
   });
 
   const [bedRoomsCount, locations, amenities] = useConstantsData();
@@ -26,7 +26,7 @@ const Filter = ({ property, filterProperties }) => {
       setPositionTop({ top: "0px", bottom: "auto" });
       document.body.style.overflow = "hidden";
     } else {
-      setPositionTop({ top: "auto", bottom: "-100%" });
+      setPositionTop({ top: "auto", bottom: "-100vh" });
       document.body.style.overflow = "auto";
     }
 

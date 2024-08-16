@@ -20,7 +20,7 @@ const useRouting = createBrowserRouter([
   },
   {
     path: "/checkout",
-    element: <ProtectedRoute element={<Checkout />} />,
+    element: <ProtectedRoute element={<Checkout />}/>,
   },
   {
     path: "/signup",
@@ -31,7 +31,7 @@ const useRouting = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "*",
+    path: "/*",
     element: <ErrorPage />,
   },
 ]);

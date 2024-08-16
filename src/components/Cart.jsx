@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import { MyContext } from "../utils/MyContextProvider";
 import { FaPlus } from "react-icons/fa6";
@@ -7,11 +7,14 @@ import { RiDeleteBinFill } from "react-icons/ri";
 import "./Cart.css";
 import { useNavigate } from "react-router-dom";
 import useImagesMap from "../utils/useImagesMap";
+import Footer from "./Footer";
+import emptyCart from "../assets/images/empty_cart.svg";
 
 const cleaningFee = 100;
 
 const Cart = () => {
   const navigate = useNavigate();
+  const [emptyCartHeight, setEmptyCartHeight] = useState("300px");
 
   const {
     items,
@@ -34,6 +37,20 @@ const Cart = () => {
   const imagesMap = useImagesMap();
 
   const totalCharges = totalPrice + cleaningFee * totalRooms;
+
+  useEffect(() => {
+    const updateCartHeight = () => {
+      const viewportHeight = window.innerHeight;
+      setEmptyCartHeight(viewportHeight - 189);
+    };
+    updateCartHeight();
+  }, []);
+
+  // useEffect(() => {
+  //   if(items?.length === 0){
+  //     document.body.style.overflow = 'hidden'
+  //   }
+  // },[items])
 
   return (
     <>
@@ -141,10 +158,17 @@ const Cart = () => {
           </section>
         </section>
       ) : (
-        <div className="empty-cart-message">
+        <div
+          className="empty-cart-message"
+          style={{ height: `${emptyCartHeight}px` }}
+        >
+          <div>
+            <img src={emptyCart} alt="Empty Cart" className="error-image" />
+          </div>
           <p>Your cart is empty</p>
         </div>
       )}
+      <Footer />
     </>
   );
 };

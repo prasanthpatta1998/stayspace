@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import Properties from "./mock/mockPropertiesData.json";
 import "./Home.css";
@@ -7,17 +7,31 @@ import Filter from "./Filter";
 import stayspace from "../assets/images/stayspace_img.png";
 import { HeaderShimmer, Shimmer } from "./Shimmer";
 import { MyContext } from "../utils/MyContextProvider";
+import Footer from "./Footer";
+import NoResult from "../assets/images/empty_result.svg";
 
 const Home = () => {
   const [properties, setProperties] = useState(Properties);
   const [tempData, setTempData] = useState(Properties);
-  const {shimmer, setShimmer} = useContext(MyContext)
+  const { shimmer, setShimmer } = useContext(MyContext);
+  const heightRef = useRef(null);
+  const [emptyRoomsHeight, setemptyRoomsHeight] = useState("300px");
 
   useEffect(() => {
     setTimeout(() => {
       setShimmer(false);
     }, 4000);
-  },[shimmer]);
+  }, [shimmer]);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (heightRef.current) {
+        const viewportHeight = window.innerHeight;
+        setemptyRoomsHeight(viewportHeight -189);
+      }
+    };
+    updateHeight();
+  }, [properties]);
 
   const filterProperties = (filterData) => {
     const { location, minPrice, maxPrice, bedrooms, amenities } = filterData;
@@ -70,7 +84,14 @@ const Home = () => {
                 })}
               </>
             ) : (
-              <div className="empty-property-message">
+              <div
+                ref={heightRef}
+                className="empty-property-message"
+                style={{ height: `${emptyRoomsHeight}px` }}
+              >
+                <div>
+                  <img src={NoResult} alt="No Result" className="error-image" />
+                </div>
                 <p>Room you're looking for are not available.</p>
               </div>
             )}
@@ -78,6 +99,7 @@ const Home = () => {
         )}
         <Filter property={properties} filterProperties={filterProperties} />
       </main>
+      <Footer />
     </>
   );
 };

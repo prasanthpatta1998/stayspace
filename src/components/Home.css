@@ -148,6 +148,7 @@ article {
   margin-bottom: 16px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   width: 100%;
+  padding-bottom: 10px;
 }
 
 .home-image-container {
@@ -157,7 +158,7 @@ article {
 }
 
 .details-container {
-  padding: 10px 7px;
+  padding: 10px 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -233,6 +234,10 @@ small {
   .cart-button {
     font-size: 20px;
   }
+
+  .logout{
+    padding: 8px 10px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -260,6 +265,9 @@ small {
 
   .cart-button {
     font-size: 22px;
+  }
+  .logout{
+    padding: 8px 16px;
   }
 }
 
@@ -316,6 +324,16 @@ small {
 
   .cart-button {
     font-size: 26px;
+  }
+
+  .logout{
+    padding: 8px 10px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .logout{
+    padding: 8px 16px;
   }
 }
 
@@ -383,7 +401,7 @@ h3 {
   font-weight: bold;
 }
 
-.min-price > input:focus{
+.min-price > input:focus {
   outline: none;
 }
 
@@ -440,8 +458,7 @@ h3 {
   color: #333333;
 }
 
-.amenities:focus{
-  
+.amenities:focus {
 }
 
 @media (min-width: 576px) {
@@ -461,7 +478,7 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  .amenities{
+  .amenities {
     height: 100px;
   }
 }
@@ -482,6 +499,7 @@ h3 {
 
 .empty-property-message {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -495,7 +513,7 @@ h3 {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  padding-top: 80px;
+  padding: 0px 10px;
 }
 
 /* //Shimmer */
@@ -705,7 +723,7 @@ h3 {
   min-height: 75vh;
 }
 
-.error-page-container > div > img {
+.error-image{
   width: 100%;
   height: 170px;
   object-fit: contain;
@@ -724,7 +742,7 @@ h3 {
 }
 
 @media (min-width: 576px) {
-  .error-page-container > div > img {
+  .error-image{
     height: 200px;
   }
 
@@ -738,7 +756,7 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  .error-page-container > div > img {
+  .error-image{
     height: 220px;
   }
 
@@ -752,7 +770,7 @@ h3 {
 }
 
 @media (min-width: 992px) {
-  .error-page-container > div > img {
+  .error-image{
     height: 240px;
   }
 
@@ -766,7 +784,7 @@ h3 {
 }
 
 @media (min-width: 1200px) {
-  .error-page-container > div > img {
+  .error-image{
     height: 260px;
   }
 
@@ -776,5 +794,28 @@ h3 {
 
   .error-page-container > h3 > a {
     font-size: 24px;
+  }
+}
+
+/* //Footer  */
+
+.footer {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 12px 0px;
+  font-family: "circular";
+  text-shadow: 1px 1px 1px #b8faec;
+  margin-top: 20px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  font-size: 12px;
+  min-width: 375px;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    font-size: 14px;
   }
 }
