@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { MyContext } from "../utils/MyContextProvider";
 import useImagesMap from "../utils/useImagesMap";
 
@@ -41,4 +41,4 @@ const SingleProperty = (props) => {
   );
 };
 
-export default SingleProperty;
+export default memo(SingleProperty);

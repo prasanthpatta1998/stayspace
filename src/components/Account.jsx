@@ -8,7 +8,6 @@ import booking from "../assets/images/bookings.svg";
 const Account = () => {
   const { bookedRooms } = useContext(MyContext);
   const imagesMap = useImagesMap();
-  console.log(bookedRooms);
   return (
     <>
       <Header />

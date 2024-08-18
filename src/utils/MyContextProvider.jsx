@@ -9,7 +9,6 @@ const MyContextProvider = ({ children }) => {
   const [filterLayer, updateFilterLayer] = useFilterLayer();
   const [shimmer, setShimmer] = useState(true);
   const [bookedRooms, setBookedRooms] = useState([]);
-  console.log('bookedRooms  ===>', bookedRooms)
   const [
     items,
     totalCharge,
@@ -20,7 +19,7 @@ const MyContextProvider = ({ children }) => {
     removeItem,
     setTotalCharge,
   ] = useCartItems();
-  console.log('items ===>', items )
+
 
   return (
     <MyContext.Provider

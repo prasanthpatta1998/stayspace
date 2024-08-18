@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { memo, useContext, useState } from "react";
 import { FaCircleUser } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoFilter } from "react-icons/io5";
@@ -79,4 +79,4 @@ const Header = ({ filterIcon }) => {
   );
 };
 
-export default Header;
+export default memo(Header);

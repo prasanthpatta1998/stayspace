@@ -18,3 +18,28 @@ The **Stayspace Application** is a web-based platform designed for browsing, fil
 - **Formik**: For managing form state and validation.
 - **Yup**: For schema-based validation of form inputs.
 - **react-credit-cards-2**: For Entering card detail's dynamically
+
+
+## Installation
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+- Node.js
+- npm or yarn
+
+### Installation Steps
+
+1. Clone the repo:
+
+   git clone https://github.com/prasanthpatta1998/stayspace.git
+
+2. Install NPM Packages:
+   
+   cd your-repo-name
+   npm install
+
+3. Start the development server:
+ 
+   npm run dev

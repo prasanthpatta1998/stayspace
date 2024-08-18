@@ -12,7 +12,6 @@ const Footer = () => {
       const elementTop = elementRef.current.getBoundingClientRect().top;
       const viewportHeight = window.innerHeight;
 
-      console.log(elementTop, viewportHeight);
 
       if (elementTop < viewportHeight) {
         setPosition({
