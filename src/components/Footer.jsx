@@ -31,7 +31,7 @@ const Footer = () => {
     updatePosition();
   }, []);
 
-  console.log("Positions ===>", position);
+
 
   return (
     <footer

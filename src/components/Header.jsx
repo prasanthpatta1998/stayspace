@@ -19,24 +19,24 @@ const Header = ({ filterIcon }) => {
     navigate("/login");
   };
 
-  console.log(localStorage.getItem("fullname"));
-
   return (
     <header>
       <nav>
         <ul>
-          <NavLink to="/">
-            <li>
-              <div className="header-container">
+          <li>
+            <div className="header-container">
+              <NavLink to="/account">
                 <FaCircleUser className="user-icon" />
+              </NavLink>
+              <NavLink to="/">
                 {localStorage.getItem("fullname") === null ? (
                   <h1>Welcome Friend</h1>
                 ) : (
                   <h1>{localStorage.getItem("fullname")}</h1>
                 )}
-              </div>
-            </li>
-          </NavLink>
+              </NavLink>
+            </div>
+          </li>
           <li>
             <div className="header-container">
               <NavLink to="/cart">
@@ -54,13 +54,23 @@ const Header = ({ filterIcon }) => {
                   <IoFilter className="user-icon" />
                 </button>
               ) : null}
-              <button
-                className="logout"
-                style={{ margin: "0px" }}
-                onClick={() => logoutAccount()}
-              >
-                Logout
-              </button>
+              {localStorage.getItem("token") !== null ? (
+                <button
+                  className="logout"
+                  style={{ margin: "0px" }}
+                  onClick={() => logoutAccount()}
+                >
+                  Logout
+                </button>
+              ) : (
+                <button
+                  className="logout"
+                  style={{ margin: "0px" }}
+                  onClick={() => logoutAccount()}
+                >
+                  Login
+                </button>
+              )}
             </div>
           </li>
         </ul>

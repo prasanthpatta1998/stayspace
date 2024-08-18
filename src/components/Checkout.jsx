@@ -52,7 +52,8 @@ const Checkout = () => {
   const navigate = useNavigate();
   const { height, width } = useWindowSize();
 
-  const { totalCharge, setItems } = useContext(MyContext);
+  const { items, totalCharge, setItems, bookedRooms, setBookedRooms } =
+    useContext(MyContext);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [popup, setPopup] = useState({
     top: "auto",
@@ -88,6 +89,14 @@ const Checkout = () => {
         left: "0px",
       });
       formik.resetForm();
+      const newItems = items?.map((eachItem) => ({
+        ...eachItem,
+        roomBookedDate: new Date().toLocaleDateString("en-US", {
+          day: "numeric",
+          month: "short",
+        }),
+      }));
+      setBookedRooms([...bookedRooms, ...newItems]);
       setItems([]);
     },
   });
@@ -227,7 +236,7 @@ const Checkout = () => {
           Payment is successfull
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

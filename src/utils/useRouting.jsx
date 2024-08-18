@@ -15,6 +15,10 @@ const useRouting = createBrowserRouter([
     element: <Home />,
   },
   {
+    path: "/account",
+    element: <ProtectedRoute element={<Account />}/>
+  },
+  {
     path: "/cart",
     element: <Cart />,
   },
