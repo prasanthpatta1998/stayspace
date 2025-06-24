@@ -29,6 +29,14 @@ pipeline {
     stage('Docker Build & Push') {
       steps {
         script {
+          sh '''
+        set -eux
+        whoami
+        docker --version
+        docker info
+        ls -la
+        pwd
+      '''
           docker.build("${DOCKER_IMAGE}:${env.BUILD_NUMBER}")
           withDockerRegistry([credentialsId: 'docker-hub-creds', url: '']) {
             sh "docker push ${DOCKER_IMAGE}:${env.BUILD_NUMBER}"
